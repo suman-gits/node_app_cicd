@@ -14,9 +14,9 @@ pipeline {
 //     }
     stage('Build and Test') {
       steps {
-        sh 'ls -ltr'
+        sh 'npm install'
         // build the project and create a JAR file
-        sh 'mvn clean package'
+        sh 'gulp webpack'
       }
     }
     stage('Static Code Analysis') {
