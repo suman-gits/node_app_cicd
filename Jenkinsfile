@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo'
+        sh 'echo passed'
         git branch: 'main', url: 'https://github.com/thissuman/node_app_cicd.git'
       }
     }
