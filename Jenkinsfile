@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/thissuman/node_app_cicd.git'
+        git branch: 'main', url: 'https://github.com/thissuman/node_app_cicd.git'
       }
     }
     stage('Build and Test') {
