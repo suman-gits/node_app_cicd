@@ -14,7 +14,6 @@ pipeline {
     }
     stage('Build and Test') {
       steps {
-        // build the project and create a JAR file
         sh 'mvn clean package'
       }
     }
