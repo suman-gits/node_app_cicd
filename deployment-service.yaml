@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: node
-        image: sumannn/nomde:v1
+        image: sumannn/nodeapp-cicd:replaceImageTag
         volumeMounts:
           - name: sec
             mountPath: /opt  
