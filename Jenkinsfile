@@ -2,8 +2,12 @@ pipeline {
   agent {
     docker {
       image 'node:12.2.0-alpine'
-      args '-p 3000:3000'
+      
     }
+     environment {
+        HOME = '.'
+    }
+   
   }
     stages {
 //     stage('Checkout') {
