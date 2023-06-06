@@ -18,7 +18,7 @@ pipeline {
 //         git 'https://github.com/thissuman/node_app_cicd.git'
         
 //       }
-    }
+  //  }
     
     stage('Build and Test') {
       steps {
