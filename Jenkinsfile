@@ -13,11 +13,11 @@ pipeline {
   }
   
   stages {
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/thissuman/node_app_cicd.git'
+//     stage('Checkout') {
+//       steps {
+//         git 'https://github.com/thissuman/node_app_cicd.git'
         
-      }
+//       }
     }
     
     stage('Build and Test') {
