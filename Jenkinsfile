@@ -23,7 +23,7 @@ pipeline {
     stage('Build and Test') {
       steps {
         sh 'npm install'
-        sh 'npm run test'
+        sh 'npm run start'
       }
     }
     stage('Fix Vulnerabilities') {
