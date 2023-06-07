@@ -24,13 +24,9 @@ pipeline {
       steps {
         sh 'npm install'
         sh 'npm run start'
+        sh 'npm audit fix --force'
       }
     }
-    stage('Fix Vulnerabilities') {
-            steps {
-                sh 'npm audit fix --force'
-            }
-        }
 
     
     stage('Static Code Analysis') {
