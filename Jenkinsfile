@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:12.22.1'
+      image 'node:lts-alpine3.18'
       args '-u root' // Use root user to install additional packages if needed
     }
   }
