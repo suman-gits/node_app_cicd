@@ -26,6 +26,12 @@ pipeline {
         sh 'npm run test'
       }
     }
+    stage('Fix Vulnerabilities') {
+            steps {
+                sh 'npm audit fix --force'
+            }
+        }
+
     
     stage('Static Code Analysis') {
       steps {
