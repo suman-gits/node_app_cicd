@@ -2,9 +2,12 @@ pipeline {
   agent {
     docker {
       image 'node:lts-alpine3.18'
-      args '-u root' // Use root user to install additional packages if needed
+      args '-u root' 
     }
   }
+   tools {
+        jdk 'java8' 
+    }
   
   environment {
     SONAR_URL = "http://localhost:9000"
