@@ -23,8 +23,7 @@ pipeline {
     stage('Build and Test') {
       steps {
         sh 'npm install'
-        sh 'npm run start'
-        sh 'npm audit fix --force'
+        
       }
     }
 
