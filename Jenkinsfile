@@ -33,8 +33,8 @@ pipeline {
     
     stage('Static Code Analysis') {
       steps {
+         sh 'npm install -g sonarqube-scanner'
         withSonarQubeEnv('sonar') {
-          sh 'npm install -g sonarqube-scanner'
           sh 'sonar-scanner'
         }
       }
