@@ -34,8 +34,12 @@ pipeline {
     stage('Static Code Analysis') {
       steps {
          sh 'npm install -g sonarqube-scanner'
-        withSonarQubeEnv('sonar') {
-          sh 'sonar-scanner'
+            sh '''
+    sonar-scanner \
+      -Dsonar.login=$SONAR_AUTH_TOKEN \
+      -Dsonar.host.url=$SONAR_URL \
+    '''
+        }
         }
       }
     }
