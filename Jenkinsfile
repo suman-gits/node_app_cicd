@@ -33,7 +33,6 @@ pipeline {
     
     stage('Static Code Analysis') {
       steps {
-         sh 'npm install -g sonarqube-scanner'
             sh '''
     sonar-scanner \
       -Dsonar.login=$SONAR_AUTH_TOKEN \
